@@ -24,7 +24,7 @@ import {
 
 /* 🔥 Firebase Config */
 const firebaseConfig = {
-  apiKey: "",
+  apiKey: "AIzaSyC8gws1nA-gBw-PYLCft-YIdn2lrpAZap4",
   authDomain: "job-tracker-13a99.firebaseapp.com",
   projectId: "job-tracker-13a99",
   storageBucket: "job-tracker-13a99.firebasestorage.app",
