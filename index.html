@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Job Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- LOGIN -->
+<div id="authSection">
+  <h2>Login</h2>
+  <input id="email" placeholder="Email" />
+  <input id="password" type="password" placeholder="Password" />
+
+  <button onclick="register()">Register</button>
+  <button onclick="login()">Login</button>
+  <button onclick="logout()">Logout</button>
+  <button onclick="toggleDarkMode()">
+  🌙 Dark Mode
+  </button>
+</div>
+
+<!-- APP -->
+<div id="appSection" style="display:none;">
+
+  <h1>💼 Job Tracker</h1>
+
+  <!-- DASHBOARD -->
+  <div class="dashboard">
+    <div>Applied: <span id="appliedCount">0</span></div>
+    <div>Interview: <span id="interviewCount">0</span></div>
+    <div>Rejected: <span id="rejectedCount">0</span></div>
+  </div>
+
+  <input 
+    placeholder="Search company or position..."
+    oninput="searchJobs(this.value)"
+  >
+
+  <!-- FILTERS -->
+  <div class="filters">
+    <button onclick="filterJobs('All')">All</button>
+    <button onclick="filterJobs('Applied')">Applied</button>
+    <button onclick="filterJobs('Interview')">Interview</button>
+    <button onclick="filterJobs('Rejected')">Rejected</button>
+  </div>
+
+  <!-- FORM -->
+  <div class="form">
+    <input id="company" placeholder="Company name">
+    <input id="position" placeholder="Position">
+
+    <select id="status">
+      <option>Applied</option>
+      <option>Interview</option>
+      <option>Rejected</option>
+    </select>
+
+    <button onclick="addJob()">Add</button>
+  </div>
+
+  <div id="jobList"></div>
+
+</div>
+
+<!-- ΜΟΝΟ ΑΥΤΟ SCRIPT -->
+<script type="module" src="script.js"></script>
+
+</body>
+</html>
